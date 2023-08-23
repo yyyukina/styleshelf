@@ -1,30 +1,82 @@
 .title {
-    width: 100vw;
+    font-size: 40px;
+    font-family: 'Calibri',sans-serif;
   }
 
-  /* ヘッダー */
   header {
-    height: 50px;
+    height: 80px;
+    width: 100vw;
     background-color:#f0f0f0 ;
-    padding: 10px 0;
+    padding: 0 100px 0 0;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
   }
 
   .heading {
     width: 50%;
     margin-left: 30px;
+
   }
 
-  .navbar {
-    width: 50%;
-    padding: 20px;
-  }
-  
-  .nav-lists {
+  .top {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    
+  
+  }
+
+  .lists {
+    display: flex;
+    list-style: none;
+    align-items: flex-end;
+    font-size: 20px;
+  }
+
+  .user-nickname {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 2vw;
+    font-weight: bold;
   }
   
-  li {
-    list-style: none; 
+  
+  .logout {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 2px 6px;
   }
+  
+  .login {
+    text-decoration: none;
+    color: white;
+    background-color: #333333;
+    margin-right: 2vw;
+    padding: 2px 6px;
+
+  }
+  
+  .sign-up {
+    text-decoration: none;
+    color: white;
+    background-color: #333333;
+    padding: 2px 6px;
+  }
+
+  footer {
+    height: 30px;
+    width: 100vw;
+    background-color:darkgray ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    font-family: 'Calibri',sans-serif;
+    color: white;
+    font-size: 12px;
+  }
+  
