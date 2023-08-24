@@ -32,8 +32,44 @@ Things you may want to cover:
 | encrypted_password | string | null: false               |
 
 ### Association
-has_many :items
+has_many :closets
 
 
-## items
+## closets
+
+| Column             | Type      | Options  |
+| ------------------ | --------- | -------- |
+| category_id        | integer   |          |
+| size_id            | integer   |          |
+| color_id           | integer   |          |
+| season_id          | integer   |          |
+| brand              | integer   |          |
+| memo               |  text     |          |
+| user               | references| null: false,foreign_key: true |
+
+### Association
+belongs_to :user
+
+
+## styles
+
+| Column             | Type      | Options     |
+| ------------------ | ------ ---| ----------- |
+| title              | string    |             |
+| season_id          | integer   |             |
+| memo               | text      |             |
+| item               | references| null: false,foreign_key: true |
+
+### Association
+
+
+## wish_lists
+
+| Column             | Type      | Options     |
+| ------------------ | ------ ---| ----------- |
+| category_id        | integer   | null: false |
+| item_name          | string    | null: false |
+| memo               | text      |             |
+
+### Association
 
