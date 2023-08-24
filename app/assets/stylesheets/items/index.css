@@ -3,66 +3,11 @@
     font-family: 'Calibri',sans-serif;
   }
 
-  header {
-    height: 80px;
-    width: 100vw;
-    background-color:#f0f0f0 ;
-    padding: 0 100px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-  }
-
-  .heading {
-    width: 50%;
-    margin-left: 30px;
-
-  }
-
-  .top {
+  .main {
     display: flex;
     justify-content: center;
     
-  
-  }
-
-  .lists {
-    display: flex;
-    list-style: none;
-    align-items: flex-end;
-    font-size: 20px;
-  }
-
-  .user-nickname {
-    text-decoration: none;
-    color: #333333;
-    margin-right: 2vw;
-    font-weight: bold;
-  }
-  
-  
-  .logout {
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 2px 6px;
-  }
-  
-  .login {
-    text-decoration: none;
-    color: white;
-    background-color: #333333;
-    margin-right: 2vw;
-    padding: 2px 6px;
-
-  }
-  
-  .sign-up {
-    text-decoration: none;
-    color: white;
-    background-color: #333333;
-    padding: 2px 6px;
   }
 
   footer {
@@ -79,4 +24,72 @@
     color: white;
     font-size: 12px;
   }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100vw;
+    padding: 0 15% 0 5%;
+  }
   
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-nickname {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 2vw;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  
+  .logout {
+    text-decoration: none;
+    color: black;
+    padding: 2px 6px;
+    font-size: 20px;
+  }
+  
+  .login {
+    text-decoration: none;
+    color: black;
+    margin-right: 2vw;
+    padding: 2px 6px;
+    font-size: 20px;
+
+  }
+  
+  .sign-up {
+    text-decoration: none;
+    color: black;
+    padding: 2px 6px;
+    font-size: 20px;
+  }
+
+.menu {
+  background-color: #EEE;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 25% 0 25%;
+}
+
+
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+
+
