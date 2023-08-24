@@ -13,13 +13,11 @@
     display: block;
     font-size: 18px;
     text-decoration: none;
+    color: #FF3366;
    
   }
   
-  .purchase-btn-icon {
-    width: 60%;
-  }
-  
+
   .item-lists {
     width: 100vw;
     display: flex;
@@ -39,4 +37,67 @@
   }
   
 
+  input[type="button"],input[type="submit"],button{
+    cursor: pointer;
+}
+
+
+/* サーチアイコンのスタイル */
+.search-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
   
+  /* ナビゲーションバーのスタイル */
+  .navbar {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* リストのスタイル */
+  .nav-lists {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* "SEARCH"リストのスタイル */
+  .background-red {
+    background-color: #FF3366;
+    color: white; /* 文字の色 */
+    padding: 10px 20px;
+  }
+  
+  /* プルダウンリストのスタイル */
+  .show-lists {
+    display: none; /* 最初は非表示 */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 150px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  /* プルダウンリストの個別アイテムのスタイル */
+  .pull-down-list {
+    list-style: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .pull-down-list:hover {
+    background-color: #f0f0f0; /* ホバー時の背景色 */
+  }
+  
+  /* 選択されたリストの表示スタイル */
+  #current-list {
+    padding: 10px 20px;
+    background-color: #FFBEDA; /* 選択されたリストの背景色 */
+    color: white;
+    cursor: pointer;
+  }

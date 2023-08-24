@@ -1,49 +1,72 @@
-アイテムを投稿する
-<%= form_with model: @closet, url: closets_path, local: true do |f| %>
+<header class='second-header'>
+</header>
 
-  <div class="img-upload">
-      <div class="weight-bold-text">
+<%= form_with model: @closet, url: closets_path,data: { turbo: false }, class: 'closet-main', local: true do |f| %>
+<div class='closet-form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      アイテム追加
+    </h1>
+  </div>
+
+   <div class="img-upload">
+      <div class="upload-text">
         商品画像
       </div>
       <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
         <%= f.file_field :image, id:"item-image" %>
       </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :category_id %>
-    <%= f.collection_select :category_id, Category.all, :id, :name %>
+    <div class='form-text-wrap'>
+      <label class="form-text">Category</label>
+    </div>
+      <%= f.collection_select :category_id, Category.all, :id, :name %>
   </div>
 
   <div class="form-group">
-    <%= f.label :size_id %>
+    <div class='form-text-wrap'>
+      <label class="form-text">Size</label>
+    </div>
     <%= f.collection_select :size_id, Size.all, :id, :name %>
   </div>
 
   <div class="form-group">
-    <%= f.label :color_id %>
+    <div class='form-text-wrap'>
+      <label class="form-text">Color</label>
+    </div>
     <%= f.collection_select :color_id, Color.all, :id, :name %>
   </div>
 
   <div class="form-group">
-    <%= f.label :season_id %>
+    <div class='form-text-wrap'>
+      <label class="form-text">Season</label>
+    </div>
     <%= f.collection_select :season_id, Season.all, :id, :name %>
   </div>
 
   <div class="form-group">
-    <%= f.label :brand %>
+    <div class='form-text-wrap'>
+      <label class="form-text">Brand</label>
+    </div>
     <%= f.text_field :brand %>
   </div>
 
   <div class="form-group">
-    <%= f.label :memo %>
+    <div class='form-text-wrap'>
+      <label class="form-text">Memo</label>
+    </div>
     <%= f.text_area :memo %>
   </div>
 
-  <%= f.submit "追加" %>
+
+  <div class='register-btn'>
+    <%= f.submit "追加" ,class:"closet-red-btn" %>
+  </div>
+  
+</div>
 <% end %>
 
-<%= link_to "一覧に戻る", closets_path %>
+<footer class='second-fotter'>
+</footer>
