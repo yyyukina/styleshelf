@@ -1,0 +1,46 @@
+<header>
+
+    <div class="heading">
+       <h1 class="title">Style Shelf</h1>
+    </div>
+
+  <ul class="menu">
+    <li><%= link_to "HOME", root_path %></li>
+    <li><%= link_to "CLOSET", closets_index_path %></li>
+    <li><a href="#">STYLE</a></li>
+    <li><a href="#">WISH LIST</a></li>
+  </ul>
+
+</header>
+<%# 検索機能 %>
+<%= form_with model: @closet, url: closets_path, local: true do |f| %>
+<div class="form-group">
+    <%= f.collection_select :search_id, Search.all, :id, :name %>
+</div>
+<% end %>
+<%# /検索機能 %>
+
+<%# アイテム一覧 %>
+<div class='item-contents'>
+  <ul class='item-lists'>
+    <% @closets.each do |closet| %>
+      <li class='list'>
+          <div class='item-img-content'>
+            <%= image_tag closet.image.variant(resize: '500x500'), class: "item-img" if closet.image.attached? %>
+          </div>
+      </li>
+    <% end %>
+  </ul>
+</div> 
+  <%# /アイテム一覧 %>
+
+
+
+
+
+
+
+<%= link_to(new_closet_path, class: 'purchase-btn',data: { turbo: false }) do %>
+  <span class='purchase-btn-text'>登録</span>
+  <%= image_tag 'closet-btn.png',size: '110x110',class: "closet-icon" %>
+<% end %>

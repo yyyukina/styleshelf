@@ -43,7 +43,7 @@ has_many :closets
 | size_id            | integer   |          |
 | color_id           | integer   |          |
 | season_id          | integer   |          |
-| brand              | integer   |          |
+| brand              | string   |          |
 | memo               |  text     |          |
 | user               | references| null: false,foreign_key: true |
 
