@@ -1,0 +1,49 @@
+アイテムを投稿する
+<%= form_with model: @closet, url: closets_path, local: true do |f| %>
+
+  <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category_id %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :size_id %>
+    <%= f.collection_select :size_id, Size.all, :id, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :color_id %>
+    <%= f.collection_select :color_id, Color.all, :id, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :season_id %>
+    <%= f.collection_select :season_id, Season.all, :id, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :memo %>
+    <%= f.text_area :memo %>
+  </div>
+
+  <%= f.submit "追加" %>
+<% end %>
+
+<%= link_to "一覧に戻る", closets_path %>

@@ -1,0 +1,42 @@
+.purchase-btn {
+    width: 120px;
+    text-align: center;
+    border-radius: 4%;
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+    padding: 8px;
+  }
+  
+  .purchase-btn-text {
+    color: black;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+   
+  }
+  
+  .purchase-btn-icon {
+    width: 60%;
+  }
+  
+  .item-lists {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .item-img-content {
+    position: relative;
+  }
+
+  .item-img {
+    width: 33vh;
+    height: 33vh;
+    padding: 5px;
+  }
+  
+
+  
